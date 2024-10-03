@@ -20,7 +20,7 @@ export default function Landing({isAuthenticated, setIsAuthenticated}) {
   useEffect(() => {
     async function getAndSetNumberAllTodo() {
       try{
-        const response = await axios.get('taskmanagementbackend-production-2202.up.railway.app/api/todo/count', {
+        const response = await axios.get('https://taskmanagementbackend-production-2202.up.railway.app/api/todo/count', {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
           }
@@ -38,7 +38,7 @@ export default function Landing({isAuthenticated, setIsAuthenticated}) {
 
     async function getAndSetNumberAllTodoNotCompleted() {
       try{
-        const response = await axios.get('taskmanagementbackend-production-2202.up.railway.app/api/todo/count?isCompleted=false', {
+        const response = await axios.get('https://taskmanagementbackend-production-2202.up.railway.app/api/todo/count?isCompleted=false', {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
           }
