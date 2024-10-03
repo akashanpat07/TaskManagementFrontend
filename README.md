@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+Task Management Application - Backend
+This is the backend service for the Task Management Application. It is a Spring Boot application designed to provide APIs for user authentication (signup/signin) and task management features. The backend interacts with a MySQL database and uses JWT for authentication. The frontend is hosted separately on Vercel.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User Authentication:
 
-## Available Scripts
+Sign up new users.
+Sign in existing users with JWT-based authentication.
+Task Management:
 
-In the project directory, you can run:
+Create, read, update, and delete tasks for authenticated users.
+Manage to-do lists with individual tasks.
+API Documentation:
 
-### `npm start`
+Swagger UI is available for exploring the API endpoints.
+Tech Stack
+Spring Boot 2.7.5
+Java 17
+Spring Security (JWT Authentication)
+Spring Data JPA (MySQL Database)
+Swagger for API documentation
+Railway for backend deployment
+MySQL for the database
+Getting Started
+Prerequisites
+Make sure you have the following installed on your system:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Java 17
+Maven
+MySQL (or a Railway MySQL instance)
+Docker (for containerized deployment)
+Setup
+Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+git clone https://github.com/your-username/taskmanagement-backend.git
+cd taskmanagement-backend
+Configure the MySQL Database:
 
-### `npm test`
+Create a MySQL database and update the following properties in the application.properties file:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+properties
+Copy code
+spring.datasource.url=jdbc:mysql://localhost:3306/task_management
+spring.datasource.username=<your-mysql-username>
+spring.datasource.password=<your-mysql-password>
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+Alternatively, if you're using Railway for MySQL, use the provided database credentials from your Railway instance.
