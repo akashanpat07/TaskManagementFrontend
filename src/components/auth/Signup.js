@@ -17,7 +17,7 @@ function Signup({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://steadfast-liberation.railway.app/api/auth/signup', {username, password});
+      const response = await axios.post('taskmanagementbackend-production-2202.up.railway.app/api/auth/signup', {username, password});
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
     
