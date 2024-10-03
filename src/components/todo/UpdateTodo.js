@@ -27,7 +27,7 @@ function UpdateTodo({ isAuthenticated, setIsAuthenticated }) {
        // console.log('Updating todo with ID:', id);
 
         try {
-            await axios.put(`http://localhost:3001/api/todo/${id}`, 
+            await axios.put(`https://steadfast-liberation.railway.app/api/todo/${id}`, 
                 { title, targetDate, description }, {
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem('token')}`
@@ -56,7 +56,7 @@ function UpdateTodo({ isAuthenticated, setIsAuthenticated }) {
 
             console.log('Fetching todo with ID:', id);
             try {
-                const response = await axios.get(`http://localhost:3001/api/todo/${id}`, {
+                const response = await axios.get(`https://steadfast-liberation.railway.app/api/todo/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${sessionStorage.getItem('token')}`
                     }
