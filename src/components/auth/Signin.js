@@ -25,7 +25,7 @@ function Signin({ isAuthenticated, setIsAuthenticated }) {
 
 
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/signin', { username, password });
+      const response = await axios.post('https://steadfast-liberation.railway.app/api/auth/signin', { username, password });
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
       setIsAuthenticated(true);
@@ -124,7 +124,7 @@ function Signin({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/signin', {username, password});
+      const response = await axios.post('https://steadfast-liberation.railway.app/api/auth/signin', {username, password});
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
       setIsAuthenticated(true);
