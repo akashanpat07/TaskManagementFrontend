@@ -22,7 +22,7 @@ function Signin({ isAuthenticated, setIsAuthenticated }) {
       return;
     }
 
-
+console.log(username);
 
     try {
       const response = await axios.post('https://taskmanagementbackend-production-2202.up.railway.app/api/auth/signin', { username, password });
