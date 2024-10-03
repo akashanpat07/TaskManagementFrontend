@@ -20,7 +20,7 @@ function Todos({ isAuthenticated, setIsAuthenticated }) {
         const loadData = async () => {
             let response;
             try {
-                let url = `http://localhost:3001/api/todo/`;
+                let url = `https://steadfast-liberation.railway.app/api/todo/`;
 
                 
                response = await axios.get(url, {
@@ -55,7 +55,7 @@ function Todos({ isAuthenticated, setIsAuthenticated }) {
 
     const markCompleted = async (id) => {
         try {
-            await axios.put(`http://localhost:3001/api/todo/${id}/markcomplete`, {}, {
+            await axios.put(`https://steadfast-liberation.railway.app/api/todo/${id}/markcomplete`, {}, {
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem('token')}`
                 }
@@ -72,7 +72,7 @@ function Todos({ isAuthenticated, setIsAuthenticated }) {
 
     const deleteTodo = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/api/todo/${id}`, {
+            await axios.delete(`https://steadfast-liberation.railway.app/api/todo/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem('token')}`
                 }
